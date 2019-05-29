@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="535.0" prefWidth="1071.0" style="-fx-background-color: indigo;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Bills">
+   <children>
+      <AnchorPane prefHeight="535.0" prefWidth="371.0" style="-fx-background-color: blue;">
+         <children>
+            <TextField fx:id="search" layoutX="55.0" layoutY="41.0" onKeyTyped="#onSearchMenu" prefHeight="25.0" prefWidth="262.0" promptText="SEARCH FOOD" />
+            <ImageView fitHeight="25.0" fitWidth="24.0" layoutX="293.0" layoutY="41.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/search.jpg" />
+               </image>
+            </ImageView>
+            <TableView fx:id="table" layoutY="99.0" onMousePressed="#onMousePressed" prefHeight="436.0" prefWidth="371.0">
+              <columns>
+                <TableColumn fx:id="menu" prefWidth="264.0" text="MENU " />
+                  <TableColumn fx:id="price" prefWidth="106.00003051757812" text="PRICE" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="name" layoutX="405.0" layoutY="43.0" prefHeight="25.0" prefWidth="307.0" promptText="Bill Holder's Name" />
+      <TextArea fx:id="area" editable="false" layoutX="735.0" prefHeight="538.0" prefWidth="336.0">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </TextArea>
+      <TextField fx:id="item" layoutX="405.0" layoutY="115.0" prefHeight="25.0" prefWidth="307.0" promptText="Food Item" />
+      <ComboBox fx:id="quantity" editable="true" layoutX="405.0" layoutY="185.0" prefHeight="25.0" prefWidth="307.0" promptText="1" />
+      <Button layoutX="646.0" layoutY="254.0" mnemonicParsing="false" onAction="#onAdd" prefHeight="25.0" prefWidth="66.0" style="-fx-background-color: blue;" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="rupees" layoutX="399.0" layoutY="257.0" />
+      <Button layoutX="399.0" layoutY="322.0" mnemonicParsing="false" onAction="#onReset" prefHeight="30.0" prefWidth="66.0" style="-fx-background-color: blue;" text="RESET" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="488.0" layoutY="322.0" mnemonicParsing="false" onAction="#onMakeBill" prefHeight="30.0" prefWidth="96.0" style="-fx-background-color: blue;" text="MAKE BILL" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="616.0" layoutY="322.0" mnemonicParsing="false" onAction="#onPrintBill" prefHeight="17.0" prefWidth="96.0" style="-fx-background-color: blue;" text="PRINT BILL" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="394.0" layoutY="382.0" text="PAYMENT OPTIONS" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="cash" layoutX="394.0" layoutY="427.0" mnemonicParsing="false" onAction="#casi" selected="true" text="BY CASH" textFill="WHITE" />
+      <CheckBox fx:id="online" layoutX="394.0" layoutY="465.0" mnemonicParsing="false" onAction="#onli" text="BY ONLINE PAYMENT" textFill="WHITE" />
+      <Button layoutX="610.0" layoutY="494.0" mnemonicParsing="false" onAction="#clear" prefHeight="25.0" prefWidth="96.0" style="-fx-background-color: blue;" text="CLEAR BILL" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

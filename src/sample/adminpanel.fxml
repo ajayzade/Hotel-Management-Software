@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="561.0" prefWidth="897.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Adminpanel">
+   <children>
+      <TabPane prefHeight="561.0" prefWidth="897.0" style="-fx-background-color: #8b008b;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Add Staff">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="27.0" layoutY="42.0" prefHeight="29.0" prefWidth="247.0" text="ADD NEW STAFF DETAILS :" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="27.0" layoutY="107.0" prefHeight="27.0" prefWidth="173.0" text="NAME OF PERSON :" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="27.0" layoutY="155.0" prefHeight="17.0" prefWidth="169.0" text="CONTACT NO.        :" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="27.0" layoutY="205.0" prefHeight="17.0" prefWidth="171.0" text="DATE OF BIRTH      :" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="27.0" layoutY="258.0" prefHeight="17.0" prefWidth="171.0" text="JOINING DATE       :" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="27.0" layoutY="313.0" text="FOR JOB AS            :" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="27.0" layoutY="367.0" prefHeight="17.0" prefWidth="169.0" text="ADDRESS                :" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="27.0" layoutY="84.0" opacity="0.68" prefHeight="6.0" prefWidth="847.0" />
+                        <TextField fx:id="name" layoutX="226.0" layoutY="108.0" prefHeight="25.0" prefWidth="255.0" style="-fx-background-color: #8b008b; -fx-background-insets: 0; -fx-border-color: #FFF;" styleClass="text_input" stylesheets="@../css/first.css" />
+                        <TextField fx:id="contact" layoutX="226.0" layoutY="156.0" prefHeight="25.0" prefWidth="257.0" style="-fx-background-color: #8b008b; -fx-background-insets: 0; -fx-border-color: WHITE;" styleClass="text_input" stylesheets="@../css/first.css" />
+                        <DatePicker fx:id="dob" layoutX="227.0" layoutY="206.0" prefHeight="25.0" prefWidth="256.0" style="-fx-background-color: #8b008b;" />
+                        <DatePicker fx:id="jod" layoutX="227.0" layoutY="259.0" prefHeight="25.0" prefWidth="256.0" style="-fx-background-color: #8b008b;" />
+                        <ComboBox fx:id="job" editable="true" layoutX="226.0" layoutY="314.0" prefHeight="25.0" prefWidth="260.0" style="-fx-background-color: #8b008b; -fx-background-insets: 0; -fx-border-color: WHITE;" styleClass="text_input" stylesheets="@../css/first.css" />
+                        <TextArea fx:id="address" layoutX="226.0" layoutY="367.0" prefHeight="86.0" prefWidth="264.0" style="-fx-background-color: #8b008b; -fx-background-insets: 0;" />
+                        <Label layoutX="558.0" layoutY="112.0" prefHeight="27.0" prefWidth="265.0" text="SELECT IMAGE FROM BELOW" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="image" fitHeight="159.0" fitWidth="169.0" layoutX="611.0" layoutY="219.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../images/user.png" />
+                           </image></ImageView>
+                        <Button layoutX="578.0" layoutY="410.0" mnemonicParsing="false" onAction="#onReset" style="-fx-background-color: RED; -fx-border-color: #fff; -fx-border-radius: 8; -fx-background-radius: 8;" text="RESET" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="737.0" layoutY="410.0" mnemonicParsing="false" onAction="#onSave" style="-fx-background-color: BLUE; -fx-border-color: #fff; -fx-border-radius: 8; -fx-background-radius: 8;" text="SAVE" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="27.0" layoutY="482.0" prefHeight="17.0" prefWidth="172.0" text="GENDER                  :" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="radioMale" layoutX="226.0" layoutY="487.0" mnemonicParsing="false" onAction="#onMale" style="-fx-background-color: #8b008b;" text="MALE" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="radioFemale" layoutX="333.0" layoutY="487.0" mnemonicParsing="false" onAction="#onFemale" style="-fx-background-color: #8b008b;" text="FEMALE" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <Button layoutX="641.0" layoutY="162.0" mnemonicParsing="false" onAction="#onBrowse" style="-fx-background-color: YELLOW; -fx-border-color: #fff; -fx-border-radius: 8; -fx-background-radius: 8;" text="BROWSE" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Search/Delete Staff">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="21.0" layoutY="26.0" prefHeight="27.0" prefWidth="232.0" text="SEARCH/DELETE STAFF :" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="21.0" layoutY="56.0" opacity="0.78" prefHeight="16.0" prefWidth="637.0" />
+                        <TextField fx:id="searchName" layoutX="21.0" layoutY="101.0" onKeyTyped="#onSearchName" prefHeight="25.0" prefWidth="253.0" promptText="SEARCH BY NAME" />
+                        <TextField fx:id="searchContact" layoutX="303.0" layoutY="101.0" onKeyTyped="#onSearchContact" prefHeight="25.0" prefWidth="187.0" promptText="SEARCH BY CONTACT NO" />
+                        <ImageView fx:id="searchImage" fitHeight="142.0" fitWidth="161.0" layoutX="694.0" layoutY="14.0" pickOnBounds="true" />
+                        <TableView fx:id="searchTable" layoutY="166.0" onMousePressed="#onRowSelected" prefHeight="368.0" prefWidth="897.0">
+                          <columns>
+                            <TableColumn fx:id="col11" prefWidth="175." text="NAME" />
+                            <TableColumn fx:id="col12" minWidth="0.0" prefWidth="275.0" text="ADDRESS" />
+                            <TableColumn fx:id="col13" prefWidth="130.0" text="CONTACT" />
+                            <TableColumn fx:id="col14" prefWidth="98.0" text="DATE OF BIRTH" />
+                            <TableColumn fx:id="col15" prefWidth="98.0" text="JOINING DATE" />
+                            <TableColumn fx:id="col16" prefWidth="120.0" text="PROFESSION" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="deleteButton" disable="true" layoutX="520.0" layoutY="101.0" mnemonicParsing="false" onAction="#onDelete" prefHeight="21.0" prefWidth="118.0" style="-fx-background-color: blue; -fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" text="DELETE" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Update Staff">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                   <children>
+                      <Label layoutX="27.0" layoutY="42.0" prefHeight="29.0" prefWidth="247.0" text="UPDATE STAFF DETAILS :" textFill="WHITE">
+                         <font>
+                            <Font name="System Bold" size="18.0" />
+                         </font>
+                      </Label>
+                      <Separator layoutX="27.0" layoutY="84.0" opacity="0.68" prefHeight="6.0" prefWidth="847.0" />
+                        <TextField fx:id="getName" layoutX="440.0" layoutY="44.0" prefHeight="25.0" prefWidth="252.0" />
+                        <Button layoutX="733.0" layoutY="44.0" mnemonicParsing="false" onAction="#onSearchStaff" prefHeight="25.0" prefWidth="92.0" style="-fx-background-color: green; -fx-border-radius: 8; -fx-background-radius: 8; -fx-border-color: white;" text="Search" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                      <Label layoutX="27.0" layoutY="107.0" prefHeight="27.0" prefWidth="173.0" text="NAME OF PERSON :" textFill="WHITE">
+                         <font>
+                            <Font name="System Bold" size="18.0" />
+                         </font>
+                      </Label>
+                      <Label layoutX="27.0" layoutY="155.0" prefHeight="17.0" prefWidth="169.0" text="CONTACT NO.        :" textFill="WHITE">
+                         <font>
+                            <Font name="System Bold" size="18.0" />
+                         </font>
+                      </Label>
+                      <Label layoutX="27.0" layoutY="205.0" prefHeight="17.0" prefWidth="171.0" text="DATE OF BIRTH      :" textFill="WHITE">
+                         <font>
+                            <Font name="System Bold" size="18.0" />
+                         </font>
+                      </Label>
+                      <Label layoutX="27.0" layoutY="258.0" prefHeight="17.0" prefWidth="171.0" text="JOINING DATE       :" textFill="WHITE">
+                         <font>
+                            <Font name="System Bold" size="18.0" />
+                         </font>
+                      </Label>
+                      <Label layoutX="27.0" layoutY="313.0" text="FOR JOB AS            :" textFill="WHITE">
+                         <font>
+                            <Font name="System Bold" size="18.0" />
+                         </font>
+                      </Label>
+                      <Label layoutX="27.0" layoutY="367.0" prefHeight="17.0" prefWidth="169.0" text="ADDRESS                :" textFill="WHITE">
+                         <font>
+                            <Font name="System Bold" size="18.0" />
+                         </font>
+                      </Label>
+                      <TextField fx:id="update_name" editable="false" layoutX="226.0" layoutY="108.0" prefHeight="25.0" prefWidth="255.0" style="-fx-background-color: #8b008b; -fx-background-insets: 0; -fx-border-color: #FFF;" styleClass="text_input" stylesheets="@../css/first.css" />
+                      <TextField fx:id="update_contact" editable="false" layoutX="226.0" layoutY="156.0" prefHeight="25.0" prefWidth="257.0" style="-fx-background-color: #8b008b; -fx-background-insets: 0; -fx-border-color: WHITE;" styleClass="text_input" stylesheets="@../css/first.css" />
+                      <DatePicker fx:id="update_dob" editable="false" layoutX="227.0" layoutY="206.0" prefHeight="25.0" prefWidth="256.0" style="-fx-background-color: #8b008b;" />
+                      <DatePicker fx:id="update_jod" editable="false" layoutX="227.0" layoutY="259.0" prefHeight="25.0" prefWidth="256.0" style="-fx-background-color: #8b008b;" />
+                      <ComboBox fx:id="update_job" layoutX="226.0" layoutY="314.0" prefHeight="25.0" prefWidth="260.0" style="-fx-background-color: #8b008b; -fx-background-insets: 0; -fx-border-color: WHITE;" styleClass="text_input" stylesheets="@../css/first.css" />
+                      <TextArea fx:id="update_address" editable="false" layoutX="226.0" layoutY="367.0" prefHeight="86.0" prefWidth="264.0" style="-fx-background-color: #8b008b; -fx-background-insets: 0;" />
+                        <Label layoutX="27.0" layoutY="476.0" prefHeight="31.0" prefWidth="169.0" text="Gender                    :" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="update_gender" editable="false" layoutX="226.0" layoutY="479.0" prefHeight="25.0" prefWidth="264.0" />
+                        <Button fx:id="save" disable="true" layoutX="753.0" layoutY="479.0" mnemonicParsing="false" onAction="#onSaveUpdate" prefHeight="25.0" prefWidth="92.0" style="-fx-background-color: blue; -fx-border-color: white; -fx-background-radius: 8; -fx-border-radius: 8;" text="SAVE" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+
+                   </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Room's Customer Data">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="room_table" layoutY="98.0" prefHeight="435.0" prefWidth="897.0">
+                          <columns>
+                            <TableColumn fx:id="col21" prefWidth="234.00001525878906" text="NAME" />
+                            <TableColumn fx:id="col22" prefWidth="190.0" text="EMAIL" />
+                            <TableColumn fx:id="col23" prefWidth="175.0" text="MOBILE" />
+                            <TableColumn fx:id="col24" prefWidth="154.0" text="CHECK IN" />
+                            <TableColumn fx:id="col25" prefWidth="143.0" text="CHECK OUT" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="14.0" layoutY="23.0" prefHeight="17.0" prefWidth="119.0" text="DETAILS :" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="14.0" layoutY="68.0" opacity="0.75" prefHeight="6.0" prefWidth="830.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

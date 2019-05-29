@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Hotel Software:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Hotel_Software_jar</output-path>
+    <root id="archive" name="Hotel Software.jar">
+      <element id="module-output" name="Hotel Software" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/.idea/mysql-connector-java-8.0.16.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/.idea/libraries/javax.mail-1.6.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

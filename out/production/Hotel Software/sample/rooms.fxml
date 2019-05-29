@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="538.0" prefWidth="733.0" style="-fx-background-color: #8b008b;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Rooms">
+   <children>
+      <Pane prefHeight="51.0" prefWidth="733.0" style="-fx-background-color: blue;">
+         <children>
+            <Label layoutX="23.0" layoutY="12.0" prefHeight="17.0" prefWidth="171.0" text="Manage Rooms " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <AnchorPane layoutX="30.0" layoutY="85.0" prefHeight="424.0" prefWidth="671.0" style="-fx-background-color: #fff; -fx-border-radius: 5; -fx-border-color: blue; -fx-background-radius: 5;">
+         <children>
+            <Label layoutX="25.0" layoutY="16.0" prefHeight="27.0" prefWidth="148.0" text="Fill Up Room Details :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="room_name" layoutX="25.0" layoutY="83.0" prefHeight="25.0" prefWidth="228.0" promptText="Name of Customer" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 4;" styleClass="text" stylesheets="@../css/first.css" />
+            <TextField fx:id="room_email" layoutX="25.0" layoutY="141.0" prefHeight="25.0" prefWidth="228.0" promptText="Enter Email ID" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 4;" />
+            <TextField fx:id="room_mobile" layoutX="25.0" layoutY="200.0" prefHeight="25.0" prefWidth="228.0" promptText="Customer's Mobile Number" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 4;" />
+            <ComboBox fx:id="room_type" editable="true" layoutX="25.0" layoutY="257.0" prefHeight="25.0" prefWidth="228.0" style="-fx-background-color: white; -fx-border-color: black; -fx-background-radius: 4; -fx-border-radius: 4;" />
+            <Label layoutX="308.0" layoutY="83.0" text="Check in date :">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="room_check_in" layoutX="418.0" layoutY="80.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 4;" />
+            <Label layoutX="308.0" layoutY="141.0" prefHeight="19.0" prefWidth="99.0" text="Check out date :">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="room_check_out" layoutX="419.0" layoutY="138.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 4;" />
+            <Button layoutX="542.0" layoutY="375.0" mnemonicParsing="false" onAction="#onSave" style="-fx-background-color: blue; -fx-border-color: yellow; -fx-background-radius: 4; -fx-border-radius: 4; -fx-border-width: 2;" text="SAVE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="room_guest" editable="true" layoutX="24.0" layoutY="321.0" prefHeight="25.0" prefWidth="228.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 4;" />
+            <ComboBox fx:id="rooms" editable="true" layoutX="24.0" layoutY="375.0" prefHeight="25.0" prefWidth="228.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 4;" />
+            <Label layoutX="308.0" layoutY="204.0" text="Mode Of Payment">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="cash" layoutX="310.0" layoutY="249.0" mnemonicParsing="false" onAction="#onCash" text="By Cash" textFill="#53e419">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="online" layoutX="310.0" layoutY="284.0" mnemonicParsing="false" onAction="#onPayment" text="By Online Payment" textFill="#53e419">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </RadioButton>
+            <Button layoutX="425.0" layoutY="376.0" mnemonicParsing="false" onAction="#onReset" prefHeight="34.0" prefWidth="59.0" text="RESET" />
+            <TextField fx:id="days" layoutX="310.0" layoutY="322.0" promptText="No of Days" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

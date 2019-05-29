@@ -1,0 +1,17 @@
+.text_input{
+-fx-text-fill: #fff;
+}
+
+.back:hover{
+-fx-background-color: #ba55d3;
+}
+
+.text{
+-fx-background-color: -fx-text-box-border, -fx-background;
+-fx-background-insets: 0, 0 0 1 0;
+-fx-background-radius: 0;
+}
+
+.text:focused{
+-fx-background-color: -fx-focus-color, -fx-background;
+}
